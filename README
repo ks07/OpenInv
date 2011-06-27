@@ -1,0 +1,1 @@
+A modified version of lishd's OpenInv that removes all references to the stick commands, for a marginally lighter-weight experience. All credit to lishd for the actual plugin functions!

@@ -13,5 +13,3 @@ commands:
     description: Search and list players having a specific item
     usage: |
            /<command> <Item> [MinAmount] - Item can be the Item ID or the CraftBukkit Item Name, MinAmount is the minimum amount to be considered.
-  toggleopeninv:
-    description: Toggle the stick usage

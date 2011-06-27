@@ -23,7 +23,6 @@ import org.bukkit.plugin.Plugin;
  */
 public class OpenInv extends JavaPlugin {
 	private final OpenInvPlayerListener playerListener = new OpenInvPlayerListener(this);
-	private final OpenInvEntityListener entityListener = new OpenInvEntityListener(this);
     public static PermissionHandler permissionHandler;
     public void onDisable() {
     }
@@ -46,7 +45,6 @@ public class OpenInv extends JavaPlugin {
 		pm.registerEvent(Event.Type.PLAYER_JOIN, playerListener, Event.Priority.Normal, this);
 		//pm.registerEvent(Event.Type.PLAYER_RESPAWN, playerListener, Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.PLAYER_INTERACT, playerListener, Event.Priority.Normal, this);
-		pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener, Event.Priority.Normal, this);
     	setupPermissions();
         // EXAMPLE: Custom code, here we just output some info so we can check all is well
         PluginDescriptionFile pdfFile = this.getDescription();
@@ -54,7 +52,6 @@ public class OpenInv extends JavaPlugin {
 
         getCommand("openinv").setExecutor(new OpenInvPluginCommand(this));
         getCommand("searchinv").setExecutor(new SearchInvPluginCommand(this));
-        getCommand("toggleopeninv").setExecutor(new OpenInvPluginCommand(this));
     }
     
     public static void ReplaceInv(CraftPlayer player)

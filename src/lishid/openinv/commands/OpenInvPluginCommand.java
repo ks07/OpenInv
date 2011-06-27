@@ -39,21 +39,6 @@ public class OpenInvPluginCommand implements CommandExecutor {
 			theOpenInvHistory.put(player, history);
 		}
 		
-		if(command.getName().equalsIgnoreCase("toggleopeninv"))
-		{
-			if(OpenInvToggleState.openInvState.get(player.getName()) != null && OpenInvToggleState.openInvState.get(player.getName()) == 1)
-			{
-				OpenInvToggleState.openInvState.put(player.getName(), 0);
-				player.sendMessage("OpenInv with stick is OFF.");
-			}
-			else
-			{
-				OpenInvToggleState.openInvState.put(player.getName(), 1);
-				player.sendMessage("OpenInv with stick is ON.");
-			}
-			return true;
-		}
-
 		Player target;
 		
 		if (args.length < 1) {
